@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+--red: hsl(0, 100%, 74%);
+--green: hsl(154, 59%, 51%);
+--blue: hsl(248, 32%, 49%);
+--dark-blue: hsl(249, 10%, 26%);
+--grayish-blue: hsl(246, 25%, 77%);
+}
+
+*{
+    -webkit-text-size-adjust: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url('./images/bg-intro-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 350px;
+    padding: 4em 0;
+}
+
+.title{
+    text-align: center;
+    color:rgb(255, 255, 255);
+    font-size: .9em;
+}
+
+.description{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 1.1em;
+    padding: 1em 0;
+}
+
+.price-info{
+    margin-top: 3em;
+    margin-bottom: 2em;
+    padding: 1.1em 4em;
+    text-align: center;
+    background-color:hsl(248, 32%, 49%);
+    border-radius: 1em;
+    box-shadow: 0 .5em hsla(249, 10%, 26%, 0.20);
+    color: white;
+    font-weight: 400;
+}
+
+.price-info span{
+    font-weight: 600;
+}
+
+.regForm{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 .5em hsla(249, 10%, 26%, 0.20);
+    border-radius: 1em;
+}
+
+#inputs{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width: 100%;
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: .4em;
+    padding: 1em;
+    margin: .5em 0;
+}
+
+.input{
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: right 1em top 50%;
+}
+
+input::placeholder{
+    font-weight: 700;
+}
+
+.error{
+    color:hsl(0, 100%, 74%);
+    font-size: .8em;
+    text-align: left;
+    margin-bottom: .5em;
+    display: none;
+}
+
+#btn{
+    padding: 1em;
+    border: none;
+    border-radius: .4em;
+    width: 100%;
+    display: block;
+    background-color: hsl(154, 59%, 51%);
+    box-shadow: 0 .3em rgba(12, 158, 68, 0.712);
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.warning{ 
+    margin-top: 1em;
+    text-align: center;
+    padding: 0 1em;
+    font-size: .75em;
+    color: hsl(246, 25%, 77%);
+}
+
+.warning span{
+    color: hsl(0, 100%, 74%);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media(min-width: 1000px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container{
+        width: 1000px;
+        display: grid;
+        grid-template-columns: 450px 500px;
+        gap: 3em;
+        padding: 0;
+    }
+
+    .row-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title{
+        text-align: left;
+        font-size: 1.3em;
+    }
+    
+    .description{
+        text-align: left;
+        font-size: .7em;
+    }
+
+    .price-info{
+        border-radius: .5em;
+        font-size: .9em;
+    }
+
+    .regForm{
+        border-radius: .5em;
+    }
+
+    .input{
+        padding: 1.3em;
+        margin-bottom: 1em;
+    }
+
+    .warning{
+        font-size: .6em;
+    }
+}
