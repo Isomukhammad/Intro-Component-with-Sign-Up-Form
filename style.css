@@ -87,8 +87,11 @@ input{
     margin: .5em 0;
 }
 
+input:focus{
+    border-color: red;
+}
+
 .input{
-    background-image: none;
     background-repeat: no-repeat;
     background-position: right 1em top 50%;
 }
@@ -103,6 +106,7 @@ input::placeholder{
     text-align: left;
     margin-bottom: .5em;
     display: none;
+    position: relative;
 }
 
 #btn{
@@ -116,6 +120,11 @@ input::placeholder{
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-weight: 500;
+    cursor: pointer;
+}
+
+#btn:active{
+    background-color:hsla(154, 88%, 50%, 0.986);
 }
 
 .warning{ 
@@ -130,6 +139,10 @@ input::placeholder{
     color: hsl(0, 100%, 74%);
     cursor: pointer;
     font-weight: 600;
+}
+
+.red::placeholder{
+    color:hsl(0, 100%, 74%);
 }
 
 @media(min-width: 1000px){
@@ -181,5 +194,11 @@ input::placeholder{
 
     .warning{
         font-size: .6em;
+    }
+
+    .error{
+        font-size: .7em;
+        padding-bottom: .5em;
+        justify-content: flex-end;
     }
 }
